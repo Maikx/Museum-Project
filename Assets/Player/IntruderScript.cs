@@ -20,7 +20,8 @@ public class IntruderScript : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(Intr==0)
+        this.gameObject.SetActive(false);
+        if (Intr==0)
         {
             MiM.FigureFound[0] = true;
         }
