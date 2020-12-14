@@ -23,7 +23,22 @@ public class NumberBox : MonoBehaviour
     {
         x = i;
         y = j;
-        this.gameObject.transform.localPosition = new Vector2(i, j);
+        StartCoroutine(Move());
+    }
+
+    IEnumerator Move()
+    {
+        float elapesedTime = 0;
+        float duration = 0.2f;
+        Vector2 start = this.gameObject.transform.localPosition;
+        Vector2 end = new Vector2(x, y);
+
+            while(elapesedTime<duration)
+            {
+            this.gameObject.transform.localPosition = Vector2.Lerp(start, end, (elapesedTime / duration));
+            elapesedTime += Time.deltaTime;
+            yield return null;
+            }
     }
 
     public bool IsEmpty()
