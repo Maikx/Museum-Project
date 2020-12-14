@@ -10,9 +10,30 @@ public class Puzzle : MonoBehaviour
 
     public Sprite[] sprites;
 
+    public bool index1;
+    public bool index2;
+    public bool index3;
+    public bool index4;
+    public bool index5;
+    public bool index6;
+    public bool index7;
+    public bool index8;
+    public bool index9;
+    public bool index10;
+    public bool index11;
+    public bool index12;
+    public bool index13;
+    public bool index14;
+    public bool index15;
+
     void Start()
     {
         Init();
+    }
+
+    private void Update()
+    {
+        Victory();
     }
 
     void Init()
@@ -65,5 +86,11 @@ public class Puzzle : MonoBehaviour
         if (y > 0 && boxes[x, y - 1].IsEmpty())
             return -1;
         return 0;
+    }
+
+    void Victory()
+    {
+        if (index1 == true && index2 == true && index3 == true && index4 == true && index5 == true && index6 == true && index7 == true && index8 == true && index9 == true && index10 == true && index11 == true && index12 == true && index13 == true && index14 == true && index15 == true)
+            Debug.Log("Victory");
     }
 }
