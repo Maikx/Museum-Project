@@ -899,8 +899,9 @@ GameObject:
   - component: {fileID: 5637741875540575646}
   - component: {fileID: 5637741875540575647}
   - component: {fileID: 5637741875540575640}
+  - component: {fileID: 4605713624179908685}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI varie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,6 +990,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4605713624179908685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5637741875540575641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c736096d551eea34d8c13ae07ac06072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Completed: {fileID: 7663857253657813862}
 --- !u!1 &5637741875643708403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,7 +2582,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3096524046704477293}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4605713624179908685}
+        m_MethodName: Back
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7659089268985073156
 GameObject:
   m_ObjectHideFlags: 0

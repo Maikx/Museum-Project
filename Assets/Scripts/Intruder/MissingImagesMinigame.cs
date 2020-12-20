@@ -5,7 +5,9 @@ using UnityEngine;
 public class MissingImagesMinigame : MonoBehaviour
 {
     public GameObject[] MissingFigure;
+    public GameObject VictoryPanel;
     public bool[] FigureFound;
+    public int Win = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,10 @@ public class MissingImagesMinigame : MonoBehaviour
     void Update()
     {
         BoolsCheck();
+        if(Win==3)
+        {
+            Victory();
+        }
     }
 
     public void BoolsCheck()
@@ -45,6 +51,29 @@ public class MissingImagesMinigame : MonoBehaviour
         else
         {
             MissingFigure[2].SetActive(true);
+        }
+    }
+
+    public void Victory()
+    {
+        VictoryPanel.SetActive(true);
+        PersistantObject.Intruder = 1;
+
+        if (PersistantObject.Intruder == 0 && PersistantObject.Differences == 0 && PersistantObject.Fifteen == 0)
+        {
+            PersistantObject.CompletedMinigames = 0;
+        }
+        else if (PersistantObject.Intruder == 1 || PersistantObject.Differences == 1 || PersistantObject.Fifteen == 1)
+        {
+            PersistantObject.CompletedMinigames = 1;
+        }
+        else if (PersistantObject.Intruder == 1 && PersistantObject.Differences == 1 || PersistantObject.Differences == 1 && PersistantObject.Fifteen == 1 || PersistantObject.Intruder == 1 && PersistantObject.Fifteen == 1)
+        {
+            PersistantObject.CompletedMinigames = 2;
+        }
+        else if (PersistantObject.Intruder == 1 && PersistantObject.Differences == 1 && PersistantObject.Fifteen == 1)
+        {
+            PersistantObject.CompletedMinigames = 3;
         }
     }
 }

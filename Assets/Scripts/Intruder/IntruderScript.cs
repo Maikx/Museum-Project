@@ -20,6 +20,7 @@ public class IntruderScript : MonoBehaviour
 
     private void OnMouseDown()
     {
+        MiM.Win++;
         this.gameObject.SetActive(false);
         if (Intr==0)
         {
