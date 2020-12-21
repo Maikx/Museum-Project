@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: "Assets/Scenes/Main Men\xF9.unity"
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/PlayerMovement.unity
-    guid: 9af3c1b2e25e6d9498712aa8f96656ee
+    path: Assets/Scenes/Museum.unity
+    guid: f7e2247fb86332343a488affde30194e
+  - enabled: 1
+    path: Assets/Scenes/Puzzle 15.unity
+    guid: 14d547190d8066946bc7b236e652750a
+  - enabled: 1
+    path: Assets/Scenes/Intruder.unity
+    guid: 77db78e88cfb3b64cb027365d415ed8f
+  - enabled: 1
+    path: Assets/Scenes/Differences.unity
+    guid: 87666c51bf0f4f243b94cfd86c290491
   m_configObjects: {}
