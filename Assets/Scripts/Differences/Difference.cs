@@ -36,14 +36,6 @@ public class Difference : MonoBehaviour
             DC2.Circle.SetActive(false);
             DC2.DiffCheck = Diff;
         }
-        //if(PictureN==0)
-        //{
-        //    DC.DiffCheck = Diff;
-        //}
-        //else if(PictureN==1)
-        //{
-        //    DC.DiffCheck = 0;
-        //}
     }
 
     public void BoolsCheck()
@@ -81,6 +73,33 @@ public class Difference : MonoBehaviour
         if(DC.DiffCheck==DC2.DiffCheck && DC.DiffCheck==Diff)
         {
             Comp = true;
+        }
+        if(Comp==true)
+        {
+            if(Diff==1)
+            {
+                DC.VictoryBool[0] = true;
+            }
+            if (Diff == 2)
+            {
+                DC.VictoryBool[1] = true;
+            }
+            if (Diff == 3)
+            {
+                DC.VictoryBool[2] = true;
+            }
+            if (Diff == 4)
+            {
+                DC.VictoryBool[3] = true;
+            }
+            if (Diff == 5)
+            {
+                DC.VictoryBool[4] = true;
+            }
+            if (Diff == 6)
+            {
+                DC.VictoryBool[5] = true;
+            }
         }
     }
 }

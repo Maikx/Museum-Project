@@ -91,6 +91,26 @@ public class Puzzle : MonoBehaviour
     void Victory()
     {
         if (index1 == true && index2 == true && index3 == true && index4 == true && index5 == true && index6 == true && index7 == true && index8 == true && index9 == true && index10 == true && index11 == true && index12 == true && index13 == true && index14 == true && index15 == true)
+        {
             Debug.Log("Victory");
+            PersistantObject.Fifteen = 1;
+
+            if (PersistantObject.Intruder == 0 && PersistantObject.Differences == 0 && PersistantObject.Fifteen == 0)
+            {
+                PersistantObject.CompletedMinigames = 0;
+            }
+            else if (PersistantObject.Intruder == 1 || PersistantObject.Differences == 1 || PersistantObject.Fifteen == 1)
+            {
+                PersistantObject.CompletedMinigames = 1;
+            }
+            else if (PersistantObject.Intruder == 1 && PersistantObject.Differences == 1 || PersistantObject.Differences == 1 && PersistantObject.Fifteen == 1 || PersistantObject.Intruder == 1 && PersistantObject.Fifteen == 1)
+            {
+                PersistantObject.CompletedMinigames = 2;
+            }
+            else if (PersistantObject.Intruder == 1 && PersistantObject.Differences == 1 && PersistantObject.Fifteen == 1)
+            {
+                PersistantObject.CompletedMinigames = 3;
+            }
+        }
     }
 }
