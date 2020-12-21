@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -53,14 +54,34 @@ public class PlayerController : MonoBehaviour
         {
             gameObject.transform.forward = move;
         }
-
-        // Changes the height position of the player..
-        if (playerInput.PlayerMain.Jump.triggered && groundedPlayer)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-        }
-
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.name == "Puzzle15")
+        {
+            if (playerInput.PlayerMain.Use.triggered)
+            {
+                SceneManager.LoadScene("Puzzle 15");
+            }
+        }
+
+        if (other.gameObject.name == "Differences")
+        {
+            if (playerInput.PlayerMain.Use.triggered)
+            {
+                SceneManager.LoadScene("Differences");
+            }
+        }
+
+        if (other.gameObject.name == "Intruder")
+        {
+            if (playerInput.PlayerMain.Use.triggered)
+            {
+                SceneManager.LoadScene("Intruder");
+            }
+        }
     }
 }

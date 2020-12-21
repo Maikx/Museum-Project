@@ -14,7 +14,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Jump",
+                    "name": "Use",
                     "type": "Button",
                     "id": "e737e03e-899e-447f-ba0f-3048a02a6b1d",
                     "expectedControlType": "Button",
@@ -100,11 +100,22 @@
                 {
                     "name": "",
                     "id": "2b780995-ec27-42c7-9f24-c5b41de3913f",
-                    "path": "<Keyboard>/space",
+                    "path": "<Mouse>/press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Jump",
+                    "action": "Use",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c701b569-e4b6-4d56-aa5b-9370badeb28f",
+                    "path": "<Touchscreen>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
