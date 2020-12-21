@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: "Assets/Scenes/Main Men\xF9.unity"
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Test Scene.unity
-    guid: 0d5820590eb1fd047ab71b3100c09bca
+    path: Assets/Scenes/PlayerMovement.unity
+    guid: 9af3c1b2e25e6d9498712aa8f96656ee
   m_configObjects: {}
