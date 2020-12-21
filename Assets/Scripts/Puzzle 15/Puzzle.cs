@@ -26,6 +26,8 @@ public class Puzzle : MonoBehaviour
     public bool index14;
     public bool index15;
 
+    public GameObject victoryPanel;
+
     void Start()
     {
         Init();
@@ -92,7 +94,7 @@ public class Puzzle : MonoBehaviour
     {
         if (index1 == true && index2 == true && index3 == true && index4 == true && index5 == true && index6 == true && index7 == true && index8 == true && index9 == true && index10 == true && index11 == true && index12 == true && index13 == true && index14 == true && index15 == true)
         {
-            Debug.Log("Victory");
+            victoryPanel.SetActive(true);
             PersistantObject.Fifteen = 1;
 
             if (PersistantObject.Intruder == 0 && PersistantObject.Differences == 0 && PersistantObject.Fifteen == 0)
