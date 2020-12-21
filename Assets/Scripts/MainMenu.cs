@@ -20,7 +20,14 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(PersistantObject.MaintainLanguage==0)
+        {
+            Language = false;
+        }
+        else if(PersistantObject.MaintainLanguage==1)
+        {
+            Language = true;
+        }
     }
 
     // Update is called once per frame
@@ -171,10 +178,14 @@ public class MainMenu : MonoBehaviour
     public void SetEnglish()
     {
         Language = false;
+        PersistantObject.MaintainLanguage = 0;
+        PlayerPrefs.SetInt("Language", 0);
     }
     public void SetItalian()
     {
         Language = true;
+        PersistantObject.MaintainLanguage = 1;
+        PlayerPrefs.SetInt("Language", 1);
     }
     #endregion
 

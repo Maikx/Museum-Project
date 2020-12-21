@@ -8,12 +8,14 @@ public class PersistantObject : MonoBehaviour
     public static int Differences;
     public static int Fifteen;
     public static int CompletedMinigames;
+    public static int MaintainLanguage;
     // Start is called before the first frame update
     void Start()
     {
         Intruder = PlayerPrefs.GetInt("Intr");
         Differences = PlayerPrefs.GetInt("Diff");
         Fifteen = PlayerPrefs.GetInt("Puzzle");
+        MaintainLanguage = PlayerPrefs.GetInt("Language");
     }
 
     // Update is called once per frame
